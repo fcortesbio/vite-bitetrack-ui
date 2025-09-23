@@ -1,0 +1,39 @@
+// BiteTrack API Configuration
+// Copy this file to api.ts and update the BASE_URL to point to your BiteTrack API server
+
+// API Base Configuration
+export const API_CONFIG = {
+  // Base URL for your BiteTrack API server
+  // Examples:
+  //   Development: 'http://localhost:3000/bitetrack'
+  //   Production: 'https://your-api-domain.com/bitetrack'
+  //   Remote server: 'http://your-server-ip:3000/bitetrack'
+  BASE_URL: 'http://localhost:3000/bitetrack',
+  
+  // Request timeout in milliseconds (10 seconds)
+  TIMEOUT: 10000,
+} as const;
+
+// API Endpoints (matching your BiteTrack API)
+export const ENDPOINTS = {
+  // Authentication
+  SELLER_STATUS: '/auth/seller-status',
+  LOGIN: '/auth/login',
+  ACTIVATE: '/auth/activate',
+  RECOVER: '/auth/recover',
+  RESET: '/auth/reset',
+  
+  // Sellers
+  SELLERS: '/sellers',
+  SELLERS_PENDING: '/sellers/pending',
+  
+  // Customers
+  CUSTOMERS: '/customers',
+  
+  // Products
+  PRODUCTS: '/products',
+  
+  // Sales
+  SALES: '/sales',
+  SALES_SETTLE: '/sales/:id/settle',
+} as const;
